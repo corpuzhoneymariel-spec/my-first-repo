@@ -1,0 +1,1331 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#e5eeff",
+              "on-secondary-container": "#fefcff",
+              "on-secondary-fixed": "#00174b",
+              "on-secondary": "#ffffff",
+              "border-subtle": "#E2E8F0",
+              "primary-fixed": "#cfe5fd",
+              "on-primary-fixed-variant": "#34495c",
+              "on-tertiary": "#ffffff",
+              surface: "#f8f9ff",
+              "on-primary-container": "#788da3",
+              "secondary-fixed-dim": "#b4c5ff",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              "on-tertiary-fixed-variant": "#264191",
+              "surface-bright": "#f8f9ff",
+              "tertiary-container": "#001d60",
+              "tertiary-fixed-dim": "#b6c4ff",
+              tertiary: "#000a30",
+              "on-primary-fixed": "#061d2f",
+              "success-emerald": "#059669",
+              "surface-container-highest": "#d3e4fe",
+              primary: "#000f1d",
+              "slate-dark": "#1E293B",
+              "on-error-container": "#93000a",
+              "secondary-container": "#316bf3",
+              "outline-variant": "#c3c7cd",
+              "secondary-fixed": "#dbe1ff",
+              background: "#f8f9ff",
+              "inverse-surface": "#213145",
+              "surface-tint": "#4c6075",
+              secondary: "#0051d5",
+              "on-tertiary-container": "#6e87db",
+              "on-tertiary-fixed": "#00164e",
+              "surface-container-lowest": "#ffffff",
+              "surface-alt": "#F1F5F9",
+              "on-background": "#0b1c30",
+              "primary-container": "#0f2537",
+              "surface-dim": "#cbdbf5",
+              "on-surface-variant": "#43474c",
+              "inverse-primary": "#b3c9e0",
+              "surface-variant": "#d3e4fe",
+              "inverse-on-surface": "#eaf1ff",
+              "tertiary-fixed": "#dce1ff",
+              outline: "#74777d",
+              "on-secondary-fixed-variant": "#003ea8",
+              "surface-container-low": "#eff4ff",
+              "on-surface": "#0b1c30",
+              "canvas-base": "#F8FAFC",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#dce9ff",
+              "primary-fixed-dim": "#b3c9e0",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "space-md": "1rem",
+              gutter: "1.5rem",
+              "space-2xl": "4rem",
+              margin: "1.5rem",
+              "space-xs": "0.25rem",
+              "space-sm": "0.5rem",
+              "space-lg": "1.5rem",
+              "space-xl": "2.5rem",
+              "margin-desktop": "3rem",
+            },
+            fontFamily: {
+              "body-lg": ["Plus Jakarta Sans"],
+              "display-hero": ["Plus Jakarta Sans"],
+              "label-md": ["Plus Jakarta Sans"],
+              "body-md": ["Plus Jakarta Sans"],
+              "headline-md": ["Plus Jakarta Sans"],
+              "body-sm": ["Plus Jakarta Sans"],
+              "display-hero-mobile": ["Plus Jakarta Sans"],
+              "code-badge": ["Space Mono"],
+              "headline-lg": ["Plus Jakarta Sans"],
+              "label-sm": ["Plus Jakarta Sans"],
+              "headline-sm": ["Plus Jakarta Sans"],
+            },
+            fontSize: {
+              "body-lg": [
+                "1.125rem",
+                { lineHeight: "1.75rem", fontWeight: "400" },
+              ],
+              "display-hero": [
+                "3rem",
+                {
+                  lineHeight: "3.5rem",
+                  letterSpacing: "-0.03em",
+                  fontWeight: "800",
+                },
+              ],
+              "label-md": [
+                "0.875rem",
+                {
+                  lineHeight: "1.25rem",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": ["1rem", { lineHeight: "1.5rem", fontWeight: "400" }],
+              "headline-md": [
+                "1.5rem",
+                {
+                  lineHeight: "2rem",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-sm": [
+                "0.875rem",
+                { lineHeight: "1.25rem", fontWeight: "400" },
+              ],
+              "display-hero-mobile": [
+                "2.25rem",
+                {
+                  lineHeight: "2.75rem",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "code-badge": [
+                "0.75rem",
+                { lineHeight: "1rem", fontWeight: "500" },
+              ],
+              "headline-lg": [
+                "2rem",
+                {
+                  lineHeight: "2.5rem",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "label-sm": [
+                "0.75rem",
+                {
+                  lineHeight: "1rem",
+                  letterSpacing: "0.05em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "1.25rem",
+                { lineHeight: "1.75rem", fontWeight: "600" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-canvas-base text-on-surface font-body-md text-body-md">
+    <header
+      class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(15,37,55,0.05)]"
+    >
+      <div
+        class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-space-md">
+          <img
+            alt="HMC Monogram Logo"
+            class="h-8 w-auto object-contain"
+            src="https://avatars.githubusercontent.com/u/305341816?s=400&u=40f3356859f91acacba210a9405f717b63da436a&v=4"
+          />
+          <div class="flex flex-col">
+            <span
+              class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none"
+              >Honey Mariel Corpuz</span
+            ><span
+              class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-wide uppercase mt-1"
+              >BS Information Technology</span
+            >
+          </div>
+        </div>
+        <nav
+          class="hidden md:flex items-center gap-space-lg"
+          data-active-classes="bg-surface-container-low text-primary font-bold rounded-lg"
+        >
+          <a
+            aria-current="page"
+            class="transition-colors py-2 px-3 bg-surface-container-low text-primary font-bold rounded-lg"
+            data-path="portfolio-overview"
+            href="#"
+            >Profile</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2 px-3 rounded-lg"
+            data-path="education-and-academics"
+            href="#"
+            >Education</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2 px-3 rounded-lg"
+            data-path="skills-and-competencies"
+            href="#"
+            >Skills</a
+          ><a
+            class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2 px-3 rounded-lg"
+            data-path="contact"
+            href="#"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center gap-space-md">
+          <a
+            class="hidden sm:inline-flex items-center justify-center font-label-md text-label-md bg-primary text-on-primary hover:bg-primary-container px-space-md py-space-sm rounded-lg transition-all duration-150"
+            href="#contact"
+            >Get in Touch</a
+          >
+          <div
+            class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-on-primary text-[18px]"
+              >person</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-20 bg-canvas-base">
+      <div class="flex flex-col w-full">
+        <!-- Hero Section -->
+        <section
+          class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-surface to-canvas-base py-space-xl lg:py-space-2xl"
+        >
+          <div class="absolute inset-0 pointer-events-none opacity-40">
+            <div
+              class="absolute -top-32 right-10 w-96 h-96 rounded-full bg-secondary-fixed-dim/30 blur-3xl"
+            ></div>
+            <div
+              class="absolute top-48 -left-20 w-80 h-80 rounded-full bg-surface-container-high/60 blur-2xl"
+            ></div>
+          </div>
+          <div class="relative max-w-7xl mx-auto px-6 lg:px-12">
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center"
+            >
+              <!-- Hero Left / Bio Summary -->
+              <div class="lg:col-span-8 flex flex-col gap-space-md">
+                <div class="flex flex-wrap items-center gap-space-xs">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm tracking-wide uppercase"
+                  >
+                    <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    BS Information Technology Student
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[15px] text-secondary"
+                      >location_on</span
+                    >
+                    Panabo City, Philippines
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-success-emerald/10 text-success-emerald font-label-sm text-label-sm font-semibold"
+                  >
+                    <span
+                      class="w-1.5 h-1.5 rounded-full bg-success-emerald"
+                    ></span>
+                    Open to Internship &amp; Entry-Level Roles
+                  </span>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <span
+                    class="font-code-badge text-code-badge uppercase tracking-wider text-secondary"
+                    >Curriculum Vitae</span
+                  >
+                  <h1
+                    class="font-display-hero text-display-hero text-primary tracking-tight"
+                  >
+                    Honey Mariel Corpuz
+                  </h1>
+                  <p
+                    class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed"
+                  >
+                    Aspiring Information Technology professional focused on
+                    systems development, technical innovation, and collaborative
+                    problem-solving. Committed to academic diligence and
+                    reliable execution.
+                  </p>
+                </div>
+                <!-- Quick Action CTAs -->
+                <div class="flex flex-wrap items-center gap-space-sm pt-2">
+                  <a
+                    class="inline-flex items-center justify-center gap-2 bg-primary text-on-primary hover:bg-slate-dark transition-all duration-150 px-6 py-3 rounded-lg font-label-md text-label-md shadow-md"
+                    href="#contact"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >send</span
+                    >
+                    Contact Me
+                  </a>
+                  <a
+                    class="inline-flex items-center justify-center gap-2 bg-surface-container-lowest text-primary hover:bg-surface-container-low transition-all duration-150 px-6 py-3 rounded-lg font-label-md text-label-md shadow-sm"
+                    href="mailto:corpuz.honeymariel@dnsc.edu.ph"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[18px] text-secondary"
+                      >mail</span
+                    >
+                    Email Directly
+                  </a>
+                  <a
+                    class="inline-flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors px-4 py-3 font-label-md text-label-md"
+                    href="#profile"
+                  >
+                    <span>View Qualifications</span>
+                    <span class="material-symbols-outlined text-[18px]"
+                      >arrow_downward</span
+                    >
+                  </a>
+                </div>
+                <!-- Quick Contact Pills -->
+                <div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <a
+                    class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow"
+                    href="mailto:corpuz.honeymariel@dnsc.edu.ph"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0"
+                    >
+                      <span
+                        class="material-symbols-outlined text-secondary text-[20px]"
+                        >alternate_email</span
+                      >
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                      <span
+                        class="font-code-badge text-[11px] text-on-surface-variant uppercase tracking-wider"
+                        >Email</span
+                      >
+                      <span
+                        class="font-label-sm text-label-sm text-primary truncate"
+                        >corpuz.honeymariel@dnsc.edu.ph</span
+                      >
+                    </div>
+                  </a>
+                  <a
+                    class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow"
+                    href="tel:09944397162"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0"
+                    >
+                      <span
+                        class="material-symbols-outlined text-secondary text-[20px]"
+                        >call</span
+                      >
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                      <span
+                        class="font-code-badge text-[11px] text-on-surface-variant uppercase tracking-wider"
+                        >Phone</span
+                      >
+                      <span
+                        class="font-label-sm text-label-sm text-primary truncate"
+                        >0994-439-7162</span
+                      >
+                    </div>
+                  </a>
+                  <div
+                    class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-lowest shadow-sm"
+                  >
+                    <div
+                      class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0"
+                    >
+                      <span
+                        class="material-symbols-outlined text-secondary text-[20px]"
+                        >pin_drop</span
+                      >
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                      <span
+                        class="font-code-badge text-[11px] text-on-surface-variant uppercase tracking-wider"
+                        >Location</span
+                      >
+                      <span
+                        class="font-label-sm text-label-sm text-primary truncate"
+                        >Panabo City, PH</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Hero Right / Visual Monogram Badge -->
+              <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                <div
+                  class="relative w-full max-w-sm rounded-2xl bg-surface-container-lowest p-6 shadow-xl flex flex-col items-center text-center"
+                >
+                  <div
+                    class="w-36 h-36 rounded-2xl overflow-hidden shadow-md bg-secondary flex items-center justify-center mb-4 transition-transform hover:scale-105 duration-200"
+                  >
+                    <img
+                      alt="Honey Mariel Corpuz Monogram Badge"
+                      class="w-full h-full object-cover"
+                      src="https://avatars.githubusercontent.com/u/305341816?s=400&u=40f3356859f91acacba210a9405f717b63da436a&v=4"
+                    />
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="font-headline-sm text-headline-sm text-primary"
+                      >Honey Mariel Corpuz</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-secondary font-medium"
+                      >BSIT Candidate • Class of 2026</span
+                    >
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant mt-2 px-2 leading-relaxed"
+                    >
+                      Dedicated student practitioner bridging academic computing
+                      theories with practical technical execution.
+                    </p>
+                  </div>
+                  <!-- Mini Metric Pill Bar -->
+                  <div
+                    class="w-full grid grid-cols-2 gap-2 mt-5 pt-4 border-t-0 bg-surface-container-low p-3 rounded-xl"
+                  >
+                    <div class="flex flex-col text-center">
+                      <span
+                        class="font-label-sm text-label-sm text-on-surface-variant uppercase"
+                        >Program</span
+                      >
+                      <span
+                        class="font-headline-sm text-[16px] text-primary font-bold"
+                        >BSIT</span
+                      >
+                    </div>
+                    <div class="flex flex-col text-center">
+                      <span
+                        class="font-label-sm text-label-sm text-on-surface-variant uppercase"
+                        >Institution</span
+                      >
+                      <span
+                        class="font-headline-sm text-[16px] text-secondary font-bold"
+                        >DNSC</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Profile Section -->
+        <section class="w-full py-space-xl bg-canvas-base" id="profile">
+          <div
+            class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-space-lg"
+          >
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-[20px]"
+                    >badge</span
+                  >
+                </div>
+                <span
+                  class="font-code-badge text-code-badge uppercase tracking-wider text-secondary"
+                  >About The Candidate</span
+                >
+              </div>
+              <div class="flex items-center justify-between flex-wrap gap-2">
+                <h2 class="font-headline-lg text-headline-lg text-primary">
+                  Professional Profile
+                </h2>
+                <div class="h-1 w-24 bg-secondary rounded-full"></div>
+              </div>
+            </div>
+            <!-- Verbatim Quote Box -->
+            <div
+              class="relative rounded-2xl bg-surface-container-lowest p-8 lg:p-10 shadow-md"
+            >
+              <div
+                class="absolute -top-4 left-8 px-3 py-1 rounded-full bg-primary text-on-primary font-code-badge text-[11px] uppercase tracking-wider flex items-center gap-1.5 shadow-sm"
+              >
+                <span class="material-symbols-outlined text-[14px]"
+                  >format_quote</span
+                >
+                Personal Statement
+              </div>
+              <blockquote
+                class="font-body-lg text-body-lg lg:text-[1.25rem] lg:leading-[2rem] text-primary italic pt-2"
+              >
+                “I am a hardworking, responsible, and motivated individual who
+                is willing to learn and develop new skills. I can work well with
+                others, adapt to new environments, and handle tasks responsibly.
+                I am looking forward to gaining new experiences and growing
+                personally and professionally.”
+              </blockquote>
+              <div
+                class="flex items-center justify-between flex-wrap gap-4 mt-6 pt-6 bg-surface-container-low p-4 rounded-xl"
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold font-code-badge text-body-sm"
+                  >
+                    HC
+                  </div>
+                  <div class="flex flex-col">
+                    <span
+                      class="font-headline-sm text-[15px] text-primary leading-tight"
+                      >Honey Mariel Corpuz</span
+                    >
+                    <span
+                      class="font-body-sm text-[13px] text-on-surface-variant"
+                      >Davao del Norte State College</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-success-emerald text-[18px]"
+                    >verified</span
+                  >
+                  <span>Verified Candidate Curriculum Vitae</span>
+                </div>
+              </div>
+            </div>
+            <!-- 4 Core Profile Pillars derived strictly from prompt -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md"
+            >
+              <div
+                class="rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-md transition-all flex flex-col gap-2"
+              >
+                <div
+                  class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >verified_user</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-sm text-[18px] text-primary font-semibold"
+                >
+                  Reliability
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Demonstrates dedicated responsibility, punctuality, and
+                  methodical handling of every assigned task.
+                </p>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-md transition-all flex flex-col gap-2"
+              >
+                <div
+                  class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >diversity_3</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-sm text-[18px] text-primary font-semibold"
+                >
+                  Collaborative Mindset
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Works constructively with peers, promotes open communication,
+                  and contributes to unified team objectives.
+                </p>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-md transition-all flex flex-col gap-2"
+              >
+                <div
+                  class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >published_with_changes</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-sm text-[18px] text-primary font-semibold"
+                >
+                  Rapid Adaptability
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Seamlessly adjusts to unfamiliar tools, dynamic workflows, and
+                  emerging operational environments.
+                </p>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-md transition-all flex flex-col gap-2"
+              >
+                <div
+                  class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary"
+                >
+                  <span class="material-symbols-outlined text-[22px]"
+                    >auto_stories</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-sm text-[18px] text-primary font-semibold"
+                >
+                  Continuous Learning
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Proactively pursues new skills, technical growth
+                  opportunities, and real-world IT experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Education Section -->
+        <section
+          class="w-full py-space-xl bg-surface-container-low"
+          id="education"
+        >
+          <div
+            class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-space-lg"
+          >
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-[20px]"
+                    >school</span
+                  >
+                </div>
+                <span
+                  class="font-code-badge text-code-badge uppercase tracking-wider text-secondary"
+                  >Academic Background</span
+                >
+              </div>
+              <div class="flex items-center justify-between flex-wrap gap-2">
+                <h2 class="font-headline-lg text-headline-lg text-primary">
+                  Education
+                </h2>
+                <div class="h-1 w-24 bg-secondary rounded-full"></div>
+              </div>
+            </div>
+            <!-- Education Cards Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+              <!-- Card 1: DNSC -->
+              <div
+                class="rounded-2xl bg-surface-container-lowest p-6 lg:p-8 shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between gap-space-md"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div
+                    class="flex items-center justify-between flex-wrap gap-2"
+                  >
+                    <span
+                      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold"
+                    >
+                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                      Current Degree Program
+                    </span>
+                    <span
+                      class="font-code-badge text-code-badge text-on-surface-variant"
+                      >College Level</span
+                    >
+                  </div>
+                  <div class="flex items-start gap-4 pt-2">
+                    <div
+                      class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm"
+                    >
+                      <span class="material-symbols-outlined text-[26px]"
+                        >account_balance</span
+                      >
+                    </div>
+                    <div class="flex flex-col">
+                      <h3
+                        class="font-headline-md text-headline-md text-primary leading-snug"
+                      >
+                        Davao del Norte State College
+                      </h3>
+                      <span
+                        class="font-label-md text-label-md text-secondary font-medium mt-0.5"
+                        >DNSC • Panabo City</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-1.5 mt-2"
+                  >
+                    <span
+                      class="font-code-badge text-[11px] text-on-surface-variant uppercase tracking-wider"
+                      >Degree Qualification</span
+                    >
+                    <span
+                      class="font-headline-sm text-headline-sm text-primary font-bold"
+                      >Bachelor of Science in Information Technology</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                      >Tertiary / Undergraduate Program</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-1"
+                  >
+                    Curricular focus on Information Communication Technology,
+                    modern systems architecture, software principles, and core
+                    IT fundamentals with hands-on computer laboratory practice.
+                  </p>
+                </div>
+                <div class="pt-4 border-t-0 flex flex-wrap items-center gap-2">
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge"
+                    >Information Technology</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge"
+                    >Software Principles</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge"
+                    >ICT Systems</span
+                  >
+                </div>
+              </div>
+              <!-- Card 2: Panabo City Senior High School -->
+              <div
+                class="rounded-2xl bg-surface-container-lowest p-6 lg:p-8 shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between gap-space-md"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div
+                    class="flex items-center justify-between flex-wrap gap-2"
+                  >
+                    <span
+                      class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[14px] text-success-emerald"
+                        >check_circle</span
+                      >
+                      Completed Foundation
+                    </span>
+                    <span
+                      class="font-code-badge text-code-badge text-on-surface-variant"
+                      >Senior High School</span
+                    >
+                  </div>
+                  <div class="flex items-start gap-4 pt-2">
+                    <div
+                      class="w-12 h-12 rounded-xl bg-surface-container-highest text-primary flex items-center justify-center shrink-0 shadow-sm"
+                    >
+                      <span class="material-symbols-outlined text-[26px]"
+                        >apartment</span
+                      >
+                    </div>
+                    <div class="flex flex-col">
+                      <h3
+                        class="font-headline-md text-headline-md text-primary leading-snug"
+                      >
+                        Panabo City Senior High School
+                      </h3>
+                      <span
+                        class="font-label-md text-label-md text-secondary font-medium mt-0.5"
+                        >Panabo City, Davao del Norte</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-1.5 mt-2"
+                  >
+                    <span
+                      class="font-code-badge text-[11px] text-on-surface-variant uppercase tracking-wider"
+                      >Track &amp; Strand</span
+                    >
+                    <span
+                      class="font-headline-sm text-headline-sm text-primary font-bold"
+                      >Technical Vocational Livelihood – ICT</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                      >TVL-ICT Track Graduate</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-1"
+                  >
+                    Established essential technical groundwork in computer
+                    systems servicing, network configurations, basic software
+                    utilities, and foundational digital productivity
+                    applications.
+                  </p>
+                </div>
+                <div class="pt-4 border-t-0 flex flex-wrap items-center gap-2">
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge"
+                    >TVL • ICT Track</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge"
+                    >Applied Tech</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-code-badge text-code-badge"
+                    >Secondary Diploma</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Skills Section -->
+        <section class="w-full py-space-xl bg-canvas-base" id="skills">
+          <div
+            class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-space-lg"
+          >
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-[20px]"
+                    >psychology</span
+                  >
+                </div>
+                <span
+                  class="font-code-badge text-code-badge uppercase tracking-wider text-secondary"
+                  >Core Strengths</span
+                >
+              </div>
+              <div class="flex items-center justify-between flex-wrap gap-2">
+                <h2 class="font-headline-lg text-headline-lg text-primary">
+                  Core Competencies &amp; Skills
+                </h2>
+                <div class="h-1 w-24 bg-secondary rounded-full"></div>
+              </div>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-2xl"
+              >
+                Essential professional and technical aptitudes cultivated
+                through rigorous coursework, project coordination, and teamwork.
+              </p>
+            </div>
+            <!-- The 5 Exact Skills Cards Grid -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md"
+            >
+              <!-- 1. Communication -->
+              <div
+                class="group rounded-2xl bg-surface-container-lowest p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between">
+                    <div
+                      class="w-12 h-12 rounded-xl bg-secondary-fixed text-primary flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[26px]"
+                        >chat</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-badge text-code-badge text-secondary font-bold"
+                      >01 / 05</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary font-bold"
+                  >
+                    Communication
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Clear interpersonal communication, active listening, and
+                    thorough documentation when conveying project requirements
+                    and technical concepts.
+                  </p>
+                </div>
+                <div
+                  class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  <span>Verbal &amp; Written Articulation</span>
+                </div>
+              </div>
+              <!-- 2. Teamwork -->
+              <div
+                class="group rounded-2xl bg-surface-container-lowest p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between">
+                    <div
+                      class="w-12 h-12 rounded-xl bg-secondary-fixed text-primary flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[26px]"
+                        >group</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-badge text-code-badge text-secondary font-bold"
+                      >02 / 05</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary font-bold"
+                  >
+                    Teamwork
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Collaborative spirit, supporting peers, shared
+                    accountability, and harmonious cross-functional coordination
+                    within dynamic group projects.
+                  </p>
+                </div>
+                <div
+                  class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  <span>Collaborative Execution</span>
+                </div>
+              </div>
+              <!-- 3. Problem-solving -->
+              <div
+                class="group rounded-2xl bg-surface-container-lowest p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between">
+                    <div
+                      class="w-12 h-12 rounded-xl bg-secondary-fixed text-primary flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[26px]"
+                        >extension</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-badge text-code-badge text-secondary font-bold"
+                      >03 / 05</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary font-bold"
+                  >
+                    Problem-solving
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Analytical thinking, troubleshooting IT challenges,
+                    diagnosing software bottlenecks, and implementing
+                    methodical, dependable solutions.
+                  </p>
+                </div>
+                <div
+                  class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  <span>Analytical Diagnostics</span>
+                </div>
+              </div>
+              <!-- 4. Time Management -->
+              <div
+                class="group rounded-2xl bg-surface-container-lowest p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between">
+                    <div
+                      class="w-12 h-12 rounded-xl bg-secondary-fixed text-primary flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[26px]"
+                        >schedule</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-badge text-code-badge text-secondary font-bold"
+                      >04 / 05</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary font-bold"
+                  >
+                    Time Management
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Punctual task completion, strict deadline adherence,
+                    systematic prioritization, and efficient allocation of
+                    academic and practical workloads.
+                  </p>
+                </div>
+                <div
+                  class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  <span>Milestone Prioritization</span>
+                </div>
+              </div>
+              <!-- 5. Willingness to Learn -->
+              <div
+                class="group rounded-2xl bg-surface-container-lowest p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between lg:col-span-2"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between">
+                    <div
+                      class="w-12 h-12 rounded-xl bg-secondary-fixed text-primary flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[26px]"
+                        >trending_up</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-badge text-code-badge text-secondary font-bold"
+                      >05 / 05 • Core Driver</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary font-bold"
+                  >
+                    Willingness to Learn
+                  </h3>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Proactive skill acquisition, intellectual curiosity, rapid
+                    adaptability to emerging development stacks, and enthusiasm
+                    for continuous personal and professional development.
+                  </p>
+                </div>
+                <div
+                  class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  <span>Growth Mindset &amp; Continuous Up-skilling</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contact Section -->
+        <section
+          class="w-full py-space-xl bg-surface-container-low"
+          id="contact"
+        >
+          <div
+            class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-space-lg"
+          >
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-[20px]"
+                    >contact_support</span
+                  >
+                </div>
+                <span
+                  class="font-code-badge text-code-badge uppercase tracking-wider text-secondary"
+                  >Communication Channels</span
+                >
+              </div>
+              <div class="flex items-center justify-between flex-wrap gap-2">
+                <h2 class="font-headline-lg text-headline-lg text-primary">
+                  Get in Touch
+                </h2>
+                <div class="h-1 w-24 bg-secondary rounded-full"></div>
+              </div>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-xl"
+              >
+                Interested in discussing internship opportunities, entry-level
+                IT roles, or academic collaborations? Reach out directly through
+                any of the channels below.
+              </p>
+            </div>
+            <!-- Main Contact Card -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+              <!-- Contact Details -->
+              <div
+                class="lg:col-span-7 rounded-2xl bg-surface-container-lowest p-6 lg:p-8 shadow-md flex flex-col justify-between gap-space-md"
+              >
+                <div class="flex flex-col gap-space-md">
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center font-bold font-code-badge text-body-lg"
+                    >
+                      HC
+                    </div>
+                    <div class="flex flex-col">
+                      <span
+                        class="font-headline-sm text-headline-sm text-primary"
+                        >Honey Mariel Corpuz</span
+                      >
+                      <span
+                        class="font-body-sm text-body-sm text-secondary font-medium"
+                        >BSIT Student • Panabo City, Davao del Norte</span
+                      >
+                    </div>
+                  </div>
+                  <!-- List of Contacts with Explicit Links -->
+                  <div class="flex flex-col gap-3 pt-2">
+                    <!-- Phone -->
+                    <a
+                      class="group flex items-center gap-4 p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors"
+                      href="tel:09944397162"
+                    >
+                      <div
+                        class="w-11 h-11 rounded-lg bg-surface-container-lowest text-secondary flex items-center justify-center shadow-sm shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors"
+                      >
+                        <span class="material-symbols-outlined text-[22px]"
+                          >phone_iphone</span
+                        >
+                      </div>
+                      <div class="flex flex-col min-w-0">
+                        <span
+                          class="font-code-badge text-[11px] text-on-surface-variant uppercase tracking-wider"
+                          >Phone / Mobile</span
+                        >
+                        <span
+                          class="font-headline-sm text-[16px] text-primary group-hover:text-secondary transition-colors font-semibold"
+                          >0994-439-7162</span
+                        >
+                      </div>
+                      <span
+                        class="material-symbols-outlined text-on-surface-variant ml-auto text-[20px] group-hover:translate-x-1 transition-transform"
+                        >arrow_forward</span
+                      >
+                    </a>
+                    <!-- Email -->
+                    <a
+                      class="group flex items-center gap-4 p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors"
+                      href="mailto:corpuz.honeymariel@dnsc.edu.ph"
+                    >
+                      <div
+                        class="w-11 h-11 rounded-lg bg-surface-container-lowest text-secondary flex items-center justify-center shadow-sm shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors"
+                      >
+                        <span class="material-symbols-outlined text-[22px]"
+                          >mail</span
+                        >
+                      </div>
+                      <div class="flex flex-col min-w-0">
+                        <span
+                          class="font-code-badge text-[11px] text-on-surface-variant uppercase tracking-wider"
+                          >Institutional Email</span
+                        >
+                        <span
+                          class="font-headline-sm text-[16px] text-primary group-hover:text-secondary transition-colors font-semibold truncate"
+                          >corpuz.honeymariel@dnsc.edu.ph</span
+                        >
+                      </div>
+                      <span
+                        class="material-symbols-outlined text-on-surface-variant ml-auto text-[20px] group-hover:translate-x-1 transition-transform"
+                        >arrow_forward</span
+                      >
+                    </a>
+                    <!-- Address -->
+                    <div
+                      class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low"
+                    >
+                      <div
+                        class="w-11 h-11 rounded-lg bg-surface-container-lowest text-secondary flex items-center justify-center shadow-sm shrink-0"
+                      >
+                        <span class="material-symbols-outlined text-[22px]"
+                          >location_on</span
+                        >
+                      </div>
+                      <div class="flex flex-col min-w-0">
+                        <span
+                          class="font-code-badge text-[11px] text-on-surface-variant uppercase tracking-wider"
+                          >Residential Address</span
+                        >
+                        <span
+                          class="font-body-md text-body-md text-primary font-medium"
+                          >Purok 6, New Visayas, Panabo City</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-3 pt-4">
+                  <a
+                    class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-on-secondary hover:bg-primary transition-colors font-label-md text-label-md shadow-md"
+                    href="mailto:corpuz.honeymariel@dnsc.edu.ph"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >outgoing_mail</span
+                    >
+                    Send Direct Message
+                  </a>
+                  <a
+                    class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-surface-container text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md"
+                    href="tel:09944397162"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >call</span
+                    >
+                    Place Call
+                  </a>
+                </div>
+              </div>
+              <!-- Location Context Card -->
+              <div
+                class="lg:col-span-5 rounded-2xl bg-surface-container-lowest p-6 lg:p-8 shadow-md flex flex-col justify-between gap-space-md"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="font-code-badge text-code-badge uppercase tracking-wider text-secondary"
+                      >Location &amp; Availability</span
+                    >
+                    <span
+                      class="w-2.5 h-2.5 rounded-full bg-success-emerald animate-pulse"
+                    ></span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-primary">
+                    Panabo City, Davao del Norte
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Based in Region XI (Davao Region), accessible for on-site
+                    roles within Panabo City, Tagum City, and Davao City, as
+                    well as remote internship arrangements.
+                  </p>
+                  <!-- Map View Container with data-location -->
+                  <div
+                    class="w-full h-48 rounded-xl bg-cover bg-center shadow-inner relative overflow-hidden flex items-end p-3"
+                    data-location="Panabo City, Davao del Norte, Philippines"
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCXQSi8G-gNb0JZjeYfTuYgcIW3x2xENNHhfMvea0VOdtY2utvzjiErKZ_J5xzT5j7XcqCEDbRyFOarax5htsjRiMXHUQe4f7OTjsAgzjq-5Zcvw29ssGbxFbk29g8F564odIq6ZypZIjmSeif69R73oBj-R9C4vdawzIN868Blt5xSvFIxQd5bUWvP0FwBT6-AD7tzrsOAQyc9URwPeMhjD-k-1CTs6nHRY6KGbBsJ4OaNjdb5cdAF&quot;);
+                    "
+                  >
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"
+                    ></div>
+                    <div
+                      class="relative flex items-center gap-2 text-on-primary font-label-sm text-label-sm"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[18px] text-secondary-fixed"
+                        >place</span
+                      >
+                      <span>Purok 6, New Visayas, Panabo City</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between text-body-sm text-on-surface-variant"
+                >
+                  <span class="font-medium">Timezone: UTC+8 (PHT)</span>
+                  <span
+                    class="font-code-badge text-[12px] text-secondary font-bold"
+                    >Standard Work Hours</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(15,37,55,0.03)] py-space-xl"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-space-md text-center sm:text-left"
+      >
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-primary"
+            >Honey Mariel Corpuz</span
+          ><span
+            class="font-body-sm text-body-sm text-on-surface-variant mt-0.5"
+            >Curriculum Vitae &amp; Professional Portfolio • BSIT Graduate</span
+          >
+        </div>
+        <div class="font-body-sm text-body-sm text-on-surface-variant">
+          © 2026 Honey Mariel Corpuz. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
